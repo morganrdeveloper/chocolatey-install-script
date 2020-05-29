@@ -8,11 +8,12 @@ echo ...
 ::
 :: sets array with application names to cycle through using for loop
 ::
-set apps=vscode.install yarn conemu conemu git.install openjdk jdk8 jdk11 7zip.install nodejs.install vcredist140 dotnetfx curl dotnet3.5 php dotnetcore-sdk intellijidea-community maven kubernetes-cli poshgit composer minikube docker-cli docker-desktop tomcat mongodb.install nginx sass aspnetmvc4.install selenium
+set apps=vscode.install yarn conemu git.install openjdk jdk8 jdk11 7zip.install nodejs.install vcredist140 dotnetfx curl dotnet3.5 php dotnetcore-sdk intellijidea-community maven kubernetes-cli poshgit composer minikube docker-cli docker-desktop tomcat mongodb.install nginx sass aspnetmvc4.install selenium
 ::
 ( for %%a in (%apps%) do (
 	echo Installing %%a .......
 	echo .....
 	echo ...
 	choco install -fy %%a
+	refreshenv
 ))
